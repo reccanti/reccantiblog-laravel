@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('posts');
+    return redirect()->route('post.index');
 });
+
+Route::resource('post', 'PostController', ['only' => [
+    'index'
+]]); 

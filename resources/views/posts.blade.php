@@ -7,7 +7,7 @@
         <title>Posts</title>
     <body>
         <ul>
-            @foreach(\App\Post::all() as $post)
+            @foreach($posts as $post)
             <li>{{ $post->title }}</li>
             @endforeach
         </ul>
