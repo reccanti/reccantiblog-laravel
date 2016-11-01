@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('post', 'PostController', ['only' => [
-    'index'
+    'index',
+    'show'
 ]]); 

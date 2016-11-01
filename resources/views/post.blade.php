@@ -4,13 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
+        <title>{{ $post->title }}</title>
     <body>
-        <h1>The Reccanti Blog</h1>
-        <ul>
-            @foreach($posts as $post)
-            <li><a href="/post/{{ $post->id }}">{{ $post->title }}</a></li>
-            @endforeach
-        </ul>
+        <h1>{{ $post->title }}</h1>
+        <p>{{ $post->author }}</p>
+        <p>first posted:{{ $post->created_at }} | updated:{{ $post->updated_at }}</p>
+        <p>{{ $post->content }}</p>
     </body>
 </html>
