@@ -19,3 +19,7 @@ Route::resource('post', 'PostController', ['only' => [
     'index',
     'show'
 ]]); 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
