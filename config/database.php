@@ -3,7 +3,6 @@
 $url = parse_url(getenv("DATABASE_URL"));
 
 if ($url && $url["path"]) {
-    var_dump($url);
     $host = $url["host"];
     $username = $url["user"];
     $password = $url["pass"];
