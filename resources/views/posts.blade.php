@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Posts</title>
     <body>
-        <h1>The Reccanti Blog</h1>
+        <h1>The Reccanti MVP Blog</h1>
         <ul>
             @foreach($posts as $post)
             <li><a href="/post/{{ $post->id }}">{{ $post->title }}</a></li>
