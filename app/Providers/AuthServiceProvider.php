@@ -28,9 +28,5 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Passport::routes();
-
-        Passport::tokensCan([
-            'upload_post' => 'Upload a post to the site'
-        ]);
     }
 }

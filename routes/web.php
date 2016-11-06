@@ -15,9 +15,11 @@ Route::get('/', function () {
     return redirect()->route('post.index');
 });
 
+// Route::get('register', 'RegisterController@showRegistrationForm');
+
 Route::resource('post', 'PostController', ['only' => [
     'index',
-    'show'
+    'show',
 ]]); 
 
 Auth::routes();

@@ -38,7 +38,29 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = array(
+            'title'     => 'required',
+            'author'    => 'required',
+            'content'   => 'required',
+        );
+        $validator = $this->validate($request, $rules);
+
+        // if ($validator->fails()) {
+        //     return response(500);
+        // } else {
+            $post = new Post;
+            $post->title = $request->get('title');
+            $post->author = $request->get('author');
+            $post->content = $request->get('content');
+            if ($request->get('url')) {
+                $post->url = $request->get('url');
+            } else {
+                $post->url = str_slug($request->get('title'));
+            }
+
+            $post->save();
+            return response(200);
+        // }
     }
 
     /**
