@@ -9,6 +9,7 @@
         <h1>{{ $post->title }}</h1>
         <p>{{ $post->author }}</p>
         <p>first posted:{{ $post->created_at }} | updated:{{ $post->updated_at }}</p>
-        <p>{{ $post->content }}</p>
+        {{ var_dump($post) }}
+        <div>{!! Markdown::convertToHtml($post->content) !!}</div>
     </body>
 </html>

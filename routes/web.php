@@ -22,6 +22,6 @@ Route::resource('post', 'PostController', ['only' => [
     'show',
 ]]); 
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index');
